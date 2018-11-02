@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.team1-backend</groupId>
-  <artifactId>team1-backend</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>team1-backend</name>
-  <description>yetube backend		</description>
-  <dependencyManagement>
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.team1-backend</groupId>
+	<artifactId>team1-backend</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>team1-backend</name>
+	<description>yetube backend		</description>
+	<dependencyManagement>
 		<dependencies>
 			<dependency>
 				<groupId>org.glassfish.jersey</groupId>
@@ -28,6 +28,11 @@
 			<groupId>org.glassfish.jersey.inject</groupId>
 			<artifactId>jersey-hk2</artifactId>
 		</dependency>
+
+		<dependency>
+			<groupId>org.glassfish.jersey.media</groupId>
+			<artifactId>jersey-media-multipart</artifactId>
+			</dependency>
 
 		<!-- uncomment this to get JSON support: -->
 		<dependency>
@@ -66,7 +71,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.2.1</version>
 				<executions>
 					<execution>
 						<goals>
@@ -85,5 +89,5 @@
 		<jersey.version>2.27</jersey.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-  
+
 </project>
